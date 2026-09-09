@@ -1,0 +1,299 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560" role="img" aria-label="Toyxona">
+<defs>
+  <linearGradient id="wallG" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#efdcbe"/><stop offset=".45" stop-color="#f7ead4"/><stop offset="1" stop-color="#e8d5b6"/>
+  </linearGradient>
+  <linearGradient id="sideShade" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#b8925c" stop-opacity=".38"/><stop offset=".35" stop-color="#c9a771" stop-opacity="0"/>
+    <stop offset=".65" stop-color="#c9a771" stop-opacity="0"/><stop offset="1" stop-color="#b8925c" stop-opacity=".38"/>
+  </linearGradient>
+  <linearGradient id="glassG" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#fffefb"/><stop offset=".45" stop-color="#fff8ea"/><stop offset="1" stop-color="#f6e6c6"/>
+  </linearGradient>
+  <linearGradient id="floorG" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#cdb188"/><stop offset=".3" stop-color="#dcc49f"/><stop offset="1" stop-color="#c2a578"/>
+  </linearGradient>
+  <linearGradient id="runnerG" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#e7cbc4"/><stop offset="1" stop-color="#d3a9a2"/>
+  </linearGradient>
+  <linearGradient id="curtainG" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#e3ceaa"/><stop offset=".4" stop-color="#f6ead2"/><stop offset="1" stop-color="#dcc59d"/>
+  </linearGradient>
+  <linearGradient id="valanceG" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#f7ecd6"/><stop offset="1" stop-color="#ddc59a"/>
+  </linearGradient>
+  <linearGradient id="clothG" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#fffaf1"/><stop offset=".55" stop-color="#f7ecd9"/><stop offset="1" stop-color="#e4d2b2"/>
+  </linearGradient>
+  <radialGradient id="haloG" cx="50%" cy="30%" r="60%">
+    <stop offset="0" stop-color="#fff6df" stop-opacity=".98"/><stop offset=".6" stop-color="#fff2d4" stop-opacity=".35"/>
+    <stop offset="1" stop-color="#fff2d4" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="flameG" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#fff6dd"/><stop offset=".45" stop-color="#f2cf7f" stop-opacity=".85"/><stop offset="1" stop-color="#f2cf7f" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="poolG" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#fff1d2" stop-opacity=".85"/><stop offset="1" stop-color="#fff1d2" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="shadowG" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#8a6a3a" stop-opacity=".3"/><stop offset="1" stop-color="#8a6a3a" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="vigG" cx="50%" cy="44%" r="74%">
+    <stop offset=".5" stop-color="#5b3d18" stop-opacity="0"/><stop offset="1" stop-color="#5b3d18" stop-opacity=".26"/>
+  </radialGradient>
+
+  <g id="rose">
+    <circle r="7.4" fill="#d99a9a"/>
+    <path d="M-7.4 .4a7.4 7.4 0 0 1 14.8 0z" fill="#e8b9b6"/>
+    <circle cy="1" r="4.4" fill="#efcbc6"/>
+    <path d="M-4.4 1.2a4.4 4.4 0 0 1 8.8 0z" fill="#d99a9a"/>
+    <circle cy="1.6" r="1.7" fill="#c07f80"/>
+  </g>
+  <g id="roseS"><use href="#rose" transform="scale(.66)"/></g>
+  <path id="leaf" d="M0 0c6-6.5 15-6.5 21 0-6 6.5-15 6.5-21 0z"/>
+  <g id="taper">
+    <rect x="-2.4" y="0" width="4.8" height="22" rx="2.2" fill="#fffaef" stroke="#c19640" stroke-width=".8"/>
+    <ellipse cx="0" cy="-8" rx="10" ry="13" fill="url(#flameG)"/>
+    <path d="M0-10.5c2.9 2.4 3.7 4.8 0 7.4-3.7-2.6-2.9-5 0-7.4z" fill="#f0c86c"/>
+  </g>
+  <g id="crystal">
+    <path d="M0 0c3.2 4 4.4 7.4 0 11-4.4-3.6-3.2-7 0-11z" fill="#f6e6c1" stroke="#c8a55c" stroke-width=".6"/>
+  </g>
+  <g id="chair">
+    <rect x="-13" y="-34" width="26" height="34" rx="12" fill="#f2e3c7" stroke="#b3893c" stroke-width="1.4"/>
+    <path d="M-6-28h12" stroke="#c8a55c" stroke-width="1.2" stroke-linecap="round"/>
+  </g>
+</defs>
+
+<!-- ================= room shell ================= -->
+<rect width="800" height="560" fill="url(#wallG)"/>
+<ellipse cx="400" cy="180" rx="400" ry="290" fill="url(#haloG)"/>
+
+<!-- wall panelling -->
+<g fill="none" stroke="#c2a05a" stroke-opacity=".4">
+  <rect x="36" y="120" width="96" height="316" rx="10" stroke-width="1.4"/>
+  <rect x="48" y="132" width="72" height="292" rx="7" stroke-width="1"/>
+  <rect x="668" y="120" width="96" height="316" rx="10" stroke-width="1.4"/>
+  <rect x="680" y="132" width="72" height="292" rx="7" stroke-width="1"/>
+</g>
+<g fill="none" stroke="#bd9846" stroke-opacity=".5" stroke-width="1">
+  <path d="M84 190c-9 8-9 18 0 26 9-8 9-18 0-26zM84 250c-9 8-9 18 0 26 9-8 9-18 0-26zM84 310c-9 8-9 18 0 26 9-8 9-18 0-26z"/>
+  <path d="M716 190c-9 8-9 18 0 26 9-8 9-18 0-26zM716 250c-9 8-9 18 0 26 9-8 9-18 0-26zM716 310c-9 8-9 18 0 26 9-8 9-18 0-26z"/>
+</g>
+
+<!-- ================= windows ================= -->
+<g stroke="#a9832f" stroke-width="2.6" fill="url(#glassG)">
+  <path d="M176 436V324c0-44 30-76 58-84 28 8 58 40 58 84v112z"/>
+  <path d="M508 436V324c0-44 30-76 58-84 28 8 58 40 58 84v112z"/>
+  <path d="M306 436V296c0-64 44-108 94-120 50 12 94 56 94 120v140z"/>
+</g>
+<g stroke="#bd9846" stroke-width="1" stroke-opacity=".7" fill="none">
+  <path d="M234 244v192M176 348h116M176 396h116"/>
+  <path d="M566 244v192M508 348h116M508 396h116"/>
+  <path d="M400 180v256M306 332h188M306 384h188M353 194v242M447 194v242"/>
+</g>
+<!-- light spilling from the windows -->
+<path d="M306 436h188l58 124H248z" fill="url(#poolG)" opacity=".55"/>
+<path d="M176 436h116l30 124H146z" fill="url(#poolG)" opacity=".3"/>
+<path d="M508 436h116l30 124H478z" fill="url(#poolG)" opacity=".3"/>
+
+<!-- ================= columns ================= -->
+<g fill="#f4e7cf" stroke="#b3893c" stroke-width="1.6">
+  <rect x="290" y="252" width="18" height="184"/><rect x="281" y="238" width="36" height="15" rx="3"/><rect x="283" y="434" width="32" height="10" rx="2"/>
+  <rect x="492" y="252" width="18" height="184"/><rect x="483" y="238" width="36" height="15" rx="3"/><rect x="485" y="434" width="32" height="10" rx="2"/>
+  <rect x="152" y="262" width="16" height="174"/><rect x="144" y="249" width="32" height="14" rx="3"/><rect x="146" y="434" width="28" height="10" rx="2"/>
+  <rect x="632" y="262" width="16" height="174"/><rect x="624" y="249" width="32" height="14" rx="3"/><rect x="626" y="434" width="28" height="10" rx="2"/>
+</g>
+<g fill="none" stroke="#cbab63" stroke-opacity=".55" stroke-width=".9">
+  <path d="M295 258v172M303 258v172M497 258v172M505 258v172"/>
+</g>
+
+<!-- ================= drapery ================= -->
+<g>
+  <path d="M0 0h240l-6 96c-2 34-14 66-34 92l-14 18C160 132 96 66 0 34z" fill="url(#curtainG)"/>
+  <path d="M800 0H560l6 96c2 34 14 66 34 92l14 18c26-74 90-140 186-172z" fill="url(#curtainG)"/>
+  <g fill="none" stroke="#bd9846" stroke-opacity=".5" stroke-width="1.1">
+    <path d="M52 4c8 46 22 82 44 112M104 2c6 48 16 84 34 114M156 2c2 48 8 84 20 116M206 2c-2 46-4 82 0 114"/>
+    <path d="M748 4c-8 46-22 82-44 112M696 2c-6 48-16 84-34 114M644 2c-2 48-8 84-20 116M594 2c2 46 4 82 0 114"/>
+  </g>
+  <!-- valance swags -->
+  <path d="M0 0h800v26c-116 8-206 40-286 72-38 15-76 24-114 24s-76-9-114-24C206 66 116 34 0 26z" fill="url(#valanceG)"/>
+  <path d="M0 26c116 8 206 40 286 72 38 15 76 24 114 24s76-9 114-24c80-32 170-64 286-72" fill="none" stroke="#a9832f" stroke-width="2" stroke-opacity=".85"/>
+  <g fill="none" stroke="#c2a05a" stroke-opacity=".55" stroke-width="1">
+    <path d="M64 6c60 18 122 50 176 82M170 2c50 20 106 52 152 80M630 2c-50 20-106 52-152 80M736 6c-60 18-122 50-176 82"/>
+  </g>
+  <!-- centre rosette -->
+  <circle cx="400" cy="122" r="15" fill="#f2e2c1" stroke="#a9832f" stroke-width="1.8"/>
+  <circle cx="400" cy="122" r="6" fill="#cda75e"/>
+  <path d="M385 122c-10-8-22-8-32 0M415 122c10-8 22-8 32 0" fill="none" stroke="#bd9846" stroke-width="1.4"/>
+</g>
+
+<!-- ================= chandelier ================= -->
+<g transform="translate(0,-16)">
+  <ellipse cx="400" cy="205" rx="118" ry="96" fill="url(#flameG)" opacity=".5"/>
+  <path d="M400 137v20" stroke="#a9832f" stroke-width="2" fill="none"/>
+  <path d="M400 157c-16 0-30 8-30 18h60c0-10-14-18-30-18z" fill="#f4e6c8" stroke="#a9832f" stroke-width="1.6"/>
+  <!-- tier 1 -->
+  <ellipse cx="400" cy="182" rx="76" ry="14" fill="none" stroke="#a9832f" stroke-width="2.4"/>
+  <ellipse cx="400" cy="182" rx="62" ry="11" fill="none" stroke="#c8a55c" stroke-width="1" stroke-opacity=".7"/>
+  <!-- tier 2 -->
+  <ellipse cx="400" cy="212" rx="52" ry="10" fill="none" stroke="#a9832f" stroke-width="2.2"/>
+  <!-- tier 3 -->
+  <ellipse cx="400" cy="238" rx="28" ry="7" fill="none" stroke="#a9832f" stroke-width="2"/>
+  <path d="M400 245v10" stroke="#a9832f" stroke-width="1.6"/>
+  <circle cx="400" cy="259" r="5" fill="#f2e2c1" stroke="#a9832f" stroke-width="1.4"/>
+  <!-- swagged crystal strands -->
+  <g fill="none" stroke="#c8a55c" stroke-width="1" stroke-opacity=".8">
+    <path d="M324 182c14 18 38 26 76 26s62-8 76-26"/>
+    <path d="M348 212c10 14 28 20 52 20s42-6 52-20"/>
+  </g>
+  <g fill="#eddcb4" opacity=".95">
+    <circle cx="352" cy="196" r="1.8"/><circle cx="376" cy="204" r="1.8"/><circle cx="400" cy="207" r="2"/>
+    <circle cx="424" cy="204" r="1.8"/><circle cx="448" cy="196" r="1.8"/>
+    <circle cx="370" cy="224" r="1.6"/><circle cx="400" cy="230" r="1.8"/><circle cx="430" cy="224" r="1.6"/>
+  </g>
+  <g>
+    <use href="#crystal" transform="translate(330 186)"/><use href="#crystal" transform="translate(360 194)"/>
+    <use href="#crystal" transform="translate(400 198)"/><use href="#crystal" transform="translate(440 194)"/>
+    <use href="#crystal" transform="translate(470 186)"/>
+    <use href="#crystal" transform="translate(356 218) scale(.85)"/><use href="#crystal" transform="translate(400 224) scale(.85)"/>
+    <use href="#crystal" transform="translate(444 218) scale(.85)"/>
+    <use href="#crystal" transform="translate(386 244) scale(.7)"/><use href="#crystal" transform="translate(414 244) scale(.7)"/>
+  </g>
+  <!-- candles on the top tier -->
+  <g>
+    <use href="#taper" transform="translate(336 158) scale(.8)"/>
+    <use href="#taper" transform="translate(368 152) scale(.9)"/>
+    <use href="#taper" transform="translate(432 152) scale(.9)"/>
+    <use href="#taper" transform="translate(464 158) scale(.8)"/>
+  </g>
+</g>
+
+<!-- ================= floor ================= -->
+<path d="M0 436h800v124H0z" fill="url(#floorG)"/>
+<path d="M0 436h800" stroke="#a9832f" stroke-width="1.6" stroke-opacity=".6"/>
+<g fill="none" stroke="#c2a05a" stroke-opacity=".22" stroke-width="1">
+  <path d="M140 436 60 560M260 436l-48 124M540 436l48 124M660 436l80 124M0 490h800M0 528h800"/>
+</g>
+<path d="M334 436h132l104 124H230z" fill="url(#runnerG)"/>
+<path d="M334 436h132l104 124H230z" fill="none" stroke="#c08f8a" stroke-width="1.4" stroke-opacity=".75"/>
+<path d="M352 436h96l86 124H266z" fill="none" stroke="#e6c6c0" stroke-width="1.2" stroke-opacity=".8"/>
+<g opacity=".9">
+  <use href="#roseS" transform="translate(300 500) rotate(-18)"/>
+  <use href="#roseS" transform="translate(512 482) rotate(24) scale(.85)"/>
+  <use href="#roseS" transform="translate(360 542) rotate(-6)"/>
+  <use href="#roseS" transform="translate(452 524) rotate(30) scale(.9)"/>
+  <use href="#roseS" transform="translate(406 464) rotate(-30) scale(.8)"/>
+  <use href="#roseS" transform="translate(250 546) rotate(12) scale(.75)"/>
+  <use href="#roseS" transform="translate(560 538) rotate(-14) scale(.75)"/>
+</g>
+
+<!-- ================= floral arch ================= -->
+<g>
+  <path d="M300 438C300 358 356 298 400 276c44 22 100 82 100 162" fill="none" stroke="#9fae90" stroke-width="9" stroke-linecap="round"/>
+  <path d="M300 438C300 358 356 298 400 276c44 22 100 82 100 162" fill="none" stroke="#bccbae" stroke-width="3" stroke-linecap="round"/>
+  <g fill="#a9b79a" opacity=".95">
+    <use href="#leaf" transform="translate(300 408) rotate(-100) scale(.8)"/>
+    <use href="#leaf" transform="translate(310 362) rotate(-88) scale(.9)"/>
+    <use href="#leaf" transform="translate(330 326) rotate(-58) scale(.85)"/>
+    <use href="#leaf" transform="translate(362 292) rotate(-36) scale(.8)"/>
+    <use href="#leaf" transform="translate(438 292) rotate(-144) scale(.8)"/>
+    <use href="#leaf" transform="translate(470 326) rotate(-122) scale(.85)"/>
+    <use href="#leaf" transform="translate(490 362) rotate(-92) scale(.9)"/>
+    <use href="#leaf" transform="translate(500 408) rotate(-80) scale(.8)"/>
+  </g>
+  <g fill="#bccbae" opacity=".9">
+    <use href="#leaf" transform="translate(303 430) rotate(-92) scale(.7)"/>
+    <use href="#leaf" transform="translate(497 430) rotate(-88) scale(.7)"/>
+    <use href="#leaf" transform="translate(400 272) rotate(-6) scale(.7)"/>
+    <use href="#leaf" transform="translate(400 272) rotate(186) scale(.7)"/>
+  </g>
+  <g>
+    <use href="#rose" transform="translate(400 276)"/>
+    <use href="#rose" transform="translate(373 294) scale(.92)"/><use href="#rose" transform="translate(427 294) scale(.92)"/>
+    <use href="#rose" transform="translate(346 319)"/><use href="#rose" transform="translate(454 319)"/>
+    <use href="#rose" transform="translate(322 353) scale(.92)"/><use href="#rose" transform="translate(478 353) scale(.92)"/>
+    <use href="#rose" transform="translate(306 393)"/><use href="#rose" transform="translate(494 393)"/>
+    <use href="#rose" transform="translate(301 430) scale(.9)"/><use href="#rose" transform="translate(499 430) scale(.9)"/>
+    <use href="#roseS" transform="translate(386 283)"/><use href="#roseS" transform="translate(414 283)"/>
+    <use href="#roseS" transform="translate(359 306)"/><use href="#roseS" transform="translate(441 306)"/>
+    <use href="#roseS" transform="translate(334 335)"/><use href="#roseS" transform="translate(466 335)"/>
+    <use href="#roseS" transform="translate(313 372)"/><use href="#roseS" transform="translate(487 372)"/>
+    <use href="#roseS" transform="translate(302 412)"/><use href="#roseS" transform="translate(498 412)"/>
+  </g>
+</g>
+
+<!-- ================= head table ================= -->
+<ellipse cx="400" cy="452" rx="110" ry="16" fill="url(#shadowG)"/>
+<g>
+  <path d="M316 400h168v22l-9 28H325l-9-28z" fill="url(#clothG)" stroke="#a9832f" stroke-width="1.8"/>
+  <path d="M316 420h168" stroke="#c2a05a" stroke-width="1" stroke-opacity=".7"/>
+  <path d="M366 421h68l-4 29h-60z" fill="#eed6cf" stroke="#cfa6a0" stroke-width=".8" opacity=".9"/>
+  <g fill="none" stroke="#cbab63" stroke-opacity=".6" stroke-width=".9">
+    <path d="M338 422c4 12 4 20 0 28M462 422c-4 12-4 20 0 28"/>
+  </g>
+  <use href="#taper" transform="translate(338 380) scale(.95)"/>
+  <use href="#taper" transform="translate(462 380) scale(.95)"/>
+  <g>
+    <use href="#rose" transform="translate(382 396) scale(.85)"/>
+    <use href="#rose" transform="translate(400 392) scale(.95)"/>
+    <use href="#rose" transform="translate(418 396) scale(.85)"/>
+    <g fill="#a9b79a">
+      <use href="#leaf" transform="translate(366 398) rotate(-14) scale(.6)"/>
+      <use href="#leaf" transform="translate(434 398) rotate(194) scale(.6)"/>
+    </g>
+  </g>
+</g>
+
+<!-- ================= guest tables ================= -->
+<g>
+  <ellipse cx="150" cy="500" rx="112" ry="22" fill="url(#shadowG)"/>
+  <use href="#chair" transform="translate(72 466) scale(1.05)"/>
+  <use href="#chair" transform="translate(228 466) scale(1.05)"/>
+  <path d="M62 476c0-17 40-30 88-30s88 13 88 30c0 7-5 66-9 84H71c-4-18-9-77-9-84z" fill="url(#clothG)" stroke="#a9832f" stroke-width="1.8"/>
+  <ellipse cx="150" cy="476" rx="88" ry="26" fill="#fffaf1" stroke="#a9832f" stroke-width="1.8"/>
+  <g fill="none" stroke="#cbab63" stroke-opacity=".55" stroke-width="1">
+    <path d="M100 492c14 40 20 52 0 68M200 492c-14 40-20 52 0 68M150 500c0 30 0 44 0 60"/>
+  </g>
+  <use href="#taper" transform="translate(118 448) scale(.85)"/>
+  <use href="#taper" transform="translate(182 448) scale(.85)"/>
+  <use href="#rose" transform="translate(150 458) scale(.95)"/>
+  <use href="#roseS" transform="translate(134 464)"/><use href="#roseS" transform="translate(166 464)"/>
+  <g fill="#a9b79a">
+    <use href="#leaf" transform="translate(120 468) rotate(-10) scale(.6)"/>
+    <use href="#leaf" transform="translate(180 468) rotate(190) scale(.6)"/>
+  </g>
+</g>
+<g>
+  <ellipse cx="650" cy="500" rx="112" ry="22" fill="url(#shadowG)"/>
+  <use href="#chair" transform="translate(572 466) scale(1.05)"/>
+  <use href="#chair" transform="translate(728 466) scale(1.05)"/>
+  <path d="M562 476c0-17 40-30 88-30s88 13 88 30c0 7-5 66-9 84H571c-4-18-9-77-9-84z" fill="url(#clothG)" stroke="#a9832f" stroke-width="1.8"/>
+  <ellipse cx="650" cy="476" rx="88" ry="26" fill="#fffaf1" stroke="#a9832f" stroke-width="1.8"/>
+  <g fill="none" stroke="#cbab63" stroke-opacity=".55" stroke-width="1">
+    <path d="M600 492c14 40 20 52 0 68M700 492c-14 40-20 52 0 68M650 500c0 30 0 44 0 60"/>
+  </g>
+  <use href="#taper" transform="translate(618 448) scale(.85)"/>
+  <use href="#taper" transform="translate(682 448) scale(.85)"/>
+  <use href="#rose" transform="translate(650 458) scale(.95)"/>
+  <use href="#roseS" transform="translate(634 464)"/><use href="#roseS" transform="translate(666 464)"/>
+  <g fill="#a9b79a">
+    <use href="#leaf" transform="translate(620 468) rotate(-10) scale(.6)"/>
+    <use href="#leaf" transform="translate(680 468) rotate(190) scale(.6)"/>
+  </g>
+</g>
+
+<!-- ================= string lights ================= -->
+<g fill="none" stroke="#c2a05a" stroke-opacity=".5" stroke-width="1">
+  <path d="M24 118c112 44 224 60 376 60s264-16 376-60"/>
+  <path d="M24 150c112 44 224 60 376 60s264-16 376-60" stroke-opacity=".28"/>
+</g>
+<g fill="#f0c86c">
+  <circle cx="96" cy="148" r="2.6"/><circle cx="160" cy="164" r="2.6"/><circle cx="228" cy="174" r="2.6"/>
+  <circle cx="572" cy="174" r="2.6"/><circle cx="640" cy="164" r="2.6"/><circle cx="704" cy="148" r="2.6"/>
+  <circle cx="128" cy="180" r="2"/><circle cx="196" cy="194" r="2"/><circle cx="604" cy="194" r="2"/><circle cx="672" cy="180" r="2"/>
+</g>
+
+<rect width="800" height="560" fill="url(#sideShade)"/>
+<rect width="800" height="560" fill="url(#vigG)"/>
+</svg>
