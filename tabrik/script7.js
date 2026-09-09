@@ -13,7 +13,7 @@ const I18N = {
     dMonth:"Sentyabr", dDow:"Yakshanba", mapBtn:"Xaritada ko‘rish",
     progTitle:"To‘y dasturi",
     oshTitle:"Nahorgi osh", oshDesc:"Ertalabki oshga taklif etamiz", toyDesc:"To‘y marosimi va ziyofat",
-    venueTitle:"To‘y manzili", venueCity:"Olimbek MFY", venueStreet:"Behizor ko‘chasi, 49-uy", findUs:"Bizni toping",
+    venueTitle:"To‘y manzili", venueCity:"Do‘ngsaroy MFY", venueStreet:"Behizor ko‘chasi, 50-uy", findUs:"Bizni toping",
     galleryTitle:"To‘yxona galereyasi",
     dressEyebrow:"Libos uslubi",
     dressBody:"Bizning maxsus kunimizda sizni ushbu ranglarda ko‘rishdan mamnun bo‘lamiz.",
@@ -38,7 +38,7 @@ const I18N = {
     dMonth:"Сентябрь", dDow:"Якшанба", mapBtn:"Харитада кўриш",
     progTitle:"Тўй дастури",
     oshTitle:"Наҳорги ош", oshDesc:"Эрталабки ошга таклиф этамиз", toyDesc:"Тўй маросими ва зиёфат",
-    venueTitle:"Тўй манзили", venueCity:"Олимбек МФЙ", venueStreet:"Бехизор кўчаси, 49-уй", findUs:"Бизни топинг",
+    venueTitle:"Тўй манзили", venueCity:"Дўнгсарой МФЙ", venueStreet:"Бехизор кўчаси, 50-уй", findUs:"Бизни топинг",
     galleryTitle:"Тўйхона галереяси",
     dressEyebrow:"Либос услуби",
     dressBody:"Бизнинг махсус кунимизда сизни ушбу рангларда кўришдан мамнун бўламиз.",
@@ -63,7 +63,7 @@ const I18N = {
     dMonth:"Сентября", dDow:"Воскресенье", mapBtn:"Посмотреть на карте",
     progTitle:"Программа",
     oshTitle:"Утренний плов", oshDesc:"Приглашаем на утренний плов", toyDesc:"Свадебное торжество и банкет",
-    venueTitle:"Место торжества", venueCity:"Олимбек МФЙ", venueStreet:"улица Бехизор, 49", findUs:"Как нас найти",
+    venueTitle:"Место торжества", venueCity:"Донгсарой МФЙ", venueStreet:"улица Бехизор, 50", findUs:"Как нас найти",
     galleryTitle:"Галерея зала",
     dressEyebrow:"Дресс-код",
     dressBody:"Будем рады видеть вас в этих тонах в наш особенный день.",
@@ -88,7 +88,7 @@ const I18N = {
     dMonth:"September", dDow:"Sunday", mapBtn:"View on map",
     progTitle:"The Programme",
     oshTitle:"Morning pilaf", oshDesc:"You are invited to the morning pilaf", toyDesc:"Wedding ceremony & banquet",
-    venueTitle:"The Venue", venueCity:"Olimbek MFY", venueStreet:"Behizor street, 49", findUs:"Find us",
+    venueTitle:"The Venue", venueCity:"Do‘ngsaroy MFY", venueStreet:"Behizor street, 50", findUs:"Find us",
     galleryTitle:"Venue Gallery",
     dressEyebrow:"Dress Code",
     dressBody:"We would be delighted to see you in these tones on our special day.",
@@ -122,6 +122,43 @@ document.querySelectorAll('#langbar button').forEach(b=>b.addEventListener('clic
 /* reveal */
 const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.14});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ============================================================
+   MOTION — parallaks fon + scroll progress
+   ============================================================ */
+(function(){
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const bar = document.getElementById('scrollbar');
+  const imgs = reduce ? [] : Array.from(
+    document.querySelectorAll('#deck .card.media > .bg img, #deck .duo-top > .bg img')
+  );
+  const pairs = imgs.map(img => ({img, sec: img.closest('.duo-top, .card')})).filter(p => p.sec);
+
+  let ticking = false;
+  function update(){
+    ticking = false;
+    const vh = window.innerHeight;
+
+    for (const {img, sec} of pairs){
+      const r = sec.getBoundingClientRect();
+      if (r.bottom < -vh * 0.25 || r.top > vh * 1.25) continue;
+      // 0 -> bo'lim endi tepadan kirdi, 1 -> butunlay chiqib ketdi
+      const p = Math.min(1, Math.max(0, (vh - r.top) / (vh + r.height)));
+      img.style.transform = 'translate3d(0,' + (-15 * p).toFixed(2) + '%,0)';
+    }
+
+    if (bar){
+      const max = document.documentElement.scrollHeight - vh;
+      bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, window.scrollY / max) : 0) + ')';
+    }
+  }
+  function onScroll(){ if(!ticking){ ticking = true; requestAnimationFrame(update); } }
+
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll);
+  window.addEventListener('load', update);
+  update();
+})();
 
 /* countdown -> 2026-09-20 17:00 (+05) */
 const target=new Date('2026-09-20T17:00:00+05:00').getTime();
